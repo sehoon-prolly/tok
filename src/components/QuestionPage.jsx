@@ -48,7 +48,10 @@ export default function QuestionPage({ onComplete, onBack }) {
   }
 
   function handleNext() {
-    if (current.type === 'email') {
+    if (current.type === 'scale') {
+      if (scaleValue === null) return; // 선택 안 하면 이동 차단
+      advance();
+    } else if (current.type === 'email') {
       if (emailValue && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
         setEmailError('올바른 이메일 형식을 입력해주세요.');
         return;
@@ -56,8 +59,6 @@ export default function QuestionPage({ onComplete, onBack }) {
       const updated = { ...answers, [current.id]: emailValue };
       setAnswers(updated);
       advance(updated);
-    } else {
-      advance();
     }
   }
 
@@ -205,7 +206,9 @@ export default function QuestionPage({ onComplete, onBack }) {
               <motion.button
                 className={`${styles.nextBtn} ${nextEnabled ? styles.nextEnabled : ''}`}
                 onClick={handleNext}
+                disabled={current.type === 'scale' && !nextEnabled}
                 whileTap={nextEnabled ? { scale: 0.97 } : {}}
+                style={current.type === 'scale' && !nextEnabled ? { cursor: 'default' } : {}}
               >
                 <span className={styles.nextArrow}>›</span>
                 {step === total - 1 ? '제출하기' : '다음 문제'}
