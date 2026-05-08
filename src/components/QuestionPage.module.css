@@ -1,0 +1,230 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ── Top bar ── */
+.topBar {
+  flex-shrink: 0;
+  padding: 14px 20px 0;
+}
+
+.stepCount {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: #b0aecb;
+  margin-bottom: 8px;
+  padding-right: 2px;
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.backBtn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f0eefb;
+  color: #5b52d4;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1px;
+  transition: background 0.15s;
+}
+.backBtn:hover { background: #e5e1f5; }
+
+.progressTrack {
+  flex: 1;
+  height: 8px;
+  border-radius: 8px;
+  background: #f0eefb;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 8px;
+  background: #c8c2f0;
+}
+
+/* ── Slide area ── */
+.slideArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 28px;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.qLabel {
+  font-size: 72px;
+  font-weight: 700;
+  color: #e8e4fb;
+  line-height: 1;
+  user-select: none;
+  align-self: center;
+}
+
+.question {
+  font-size: 18px;
+  color: #1c1c3a;
+  line-height: 1.65;
+  text-align: left;
+  width: 100%;
+}
+
+/* ── Scale ── */
+.scaleWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scaleDots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dot {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid #dddaf2;
+  background: #ffffff;
+  color: #7b7a9a;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.dot.dotFilled {
+  border-color: #b0a8e8;
+  background: #edeaf8;
+  color: #5b52d4;
+}
+
+.dot.dotActive {
+  border-color: #7c6ff7;
+  background: #7c6ff7;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(124, 111, 247, 0.35);
+}
+
+.scaleLabels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #9896b8;
+  padding: 0 4px;
+}
+
+/* ── Email ── */
+.emailWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emailInput {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1.5px solid #e8e4fb;
+  background: #faf9ff;
+  font-size: 16px;
+  color: #1c1c3a;
+  outline: none;
+  transition: border-color 0.18s;
+}
+.emailInput:focus { border-color: #7c6ff7; background: #fff; }
+.emailInput.inputError { border-color: #e8637a; }
+
+.errorMsg {
+  font-size: 13px;
+  color: #e8637a;
+  padding-left: 4px;
+}
+
+/* ── Button area ── */
+.btnArea {
+  flex-shrink: 0;
+  padding: 8px 24px 36px;
+}
+
+.btnInner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.answerBtn {
+  width: 100%;
+  padding: 20px 24px;
+  border-radius: 50px;
+  background: #edeaf8;
+  color: #1c1c3a;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  transition: background 0.15s;
+}
+.answerBtn:hover { background: #e3def5; }
+.answerBtn.answerSelected {
+  background: #d8d2f0;
+  font-weight: 600;
+}
+
+.nextBtn {
+  align-self: center;
+  padding: 16px 36px;
+  border-radius: 50px;
+  background: #edeaf8;
+  color: #b0aecb;
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.18s;
+}
+
+.nextBtn.nextEnabled {
+  color: #1c1c3a;
+}
+.nextBtn.nextEnabled:hover { background: #e0dbf5; }
+
+.nextArrow {
+  font-size: 20px;
+  color: #7c6ff7;
+  line-height: 1;
+}

@@ -1,0 +1,155 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg, #F7F6FF);
+}
+
+.bgDecor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.scrollArea {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 20px 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.resultHeader {
+  padding: 48px 32px 36px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.resultEmoji {
+  font-size: 64px;
+  margin-bottom: 16px;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.resultLabel {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.resultTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  line-height: 1.2;
+}
+
+.resultSubtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.descSection {
+  padding: 28px 28px 20px;
+}
+
+.descText {
+  font-size: 15px;
+  color: #4A4870;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.tagsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 0 28px 24px;
+}
+
+.resultTag {
+  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid;
+  font-weight: 600;
+}
+
+.actions {
+  padding: 0 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ctaBtn {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.secondaryActions {
+  display: flex;
+  gap: 10px;
+}
+
+.shareBtn,
+.restartBtn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.shareBtn {
+  background: #F1EFFC;
+  color: #7C6FF7;
+  border: 1px solid #E0DEFF;
+}
+
+.restartBtn {
+  background: #F7F6FF;
+  color: #7B7A9A;
+  border: 1px solid #E8E6FF;
+}
+
+.credit {
+  margin-top: 24px;
+  font-size: 12px;
+  color: #7B7A9A;
+}
